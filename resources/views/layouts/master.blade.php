@@ -22,17 +22,17 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item {{ request()->is("/") ? "active" : "" }}">
+                        <a class="nav-link" href="/">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Data Alternatif</a>
+                    <li class="nav-item {{ request()->is("alternatives") ? "active" : "" }}">
+                        <a class="nav-link" href="{{ route('alternatives.index') }}">Data Alternatif</a>
                     </li>
                     @auth
-                    <li class="nav-item">
+                    <li class="nav-item {{ request()->is("nilai") ? "active" : "" }}">
                         <a class="nav-link" href="#">Nilai Alternatif</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ request()->is("bobot") ? "active" : "" }}">
                         <a class="nav-link" href="#">Bobot</a>
                     </li>
                     <li class="nav-item">
@@ -80,9 +80,7 @@
     {{-- End Navbar --}}
 
     {{-- Contents --}}
-    <div class="container">
-        @yield('content')
-    </div>
+    @yield('content')
     {{-- End Contents --}}
 
     @if (request()->is('/'))
@@ -109,7 +107,7 @@
     {{-- End Jumbotron --}}
 
     {{-- Cards Member --}}
-    <div class="container">
+    <div class="container card-members">
         <div class="row justify-content-center m-3">
             <div class="card shadow-sm" style="width: 70%">
                 <div class="card-body">
@@ -183,7 +181,7 @@
     @endif
 
     {{-- Footer --}}
-    <footer>
+    <footer style="{{ (!request()->is('/')) ? "position: absolute; bottom: 0;" : "" }}">
         <div class="container">
             <div class="row justify-content-center align-items-center p-2">
                 Made With Laravel

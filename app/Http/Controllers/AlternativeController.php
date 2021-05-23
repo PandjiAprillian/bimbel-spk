@@ -14,7 +14,8 @@ class AlternativeController extends Controller
      */
     public function index()
     {
-        //
+        $alternatives = Alternative::all();
+        return view("alternative.index", compact("alternatives"));
     }
 
     /**

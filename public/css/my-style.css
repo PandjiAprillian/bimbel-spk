@@ -2,7 +2,7 @@ footer {
     text-align: center;
     color: white;
     background-color: #e3342f;
-    bottom: 0%;
     padding: 4px;
     box-sizing: border-box;
+    width: 100%;
 }
