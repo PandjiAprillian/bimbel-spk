@@ -25,7 +25,7 @@ class AlternativeController extends Controller
      */
     public function create()
     {
-        //
+        return view("alternative.create");
     }
 
     /**

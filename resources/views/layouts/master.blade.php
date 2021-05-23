@@ -57,13 +57,13 @@
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->nama }}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                Logout
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -181,13 +181,13 @@
     @endif
 
     {{-- Footer --}}
-    <footer style="{{ (!request()->is('/')) ? "position: absolute; bottom: 0;" : "" }}">
+    {{-- <footer style="{{ (!request()->is('/')) ? "position: absolute; bottom: 0;" : "" }}">
         <div class="container">
             <div class="row justify-content-center align-items-center p-2">
                 Made With Laravel
             </div>
         </div>
-    </footer>
+    </footer> --}}
     {{-- End Footer --}}
 
     <script src="{{ asset('js/app.js') }}"></script>
