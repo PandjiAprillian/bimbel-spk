@@ -13,6 +13,6 @@ class ScoreSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Score::factory()->count(3)->create();
     }
 }

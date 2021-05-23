@@ -22,7 +22,7 @@ class ScoreFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "alternative_id" => $this->faker->unique()->numberBetween(1, 3),
         ];
     }
 }

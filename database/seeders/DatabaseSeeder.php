@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call(AlternativeSeeder::class);
+        $this->call(ScoreSeeder::class);
+        $this->call(WeightSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }

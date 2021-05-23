@@ -22,7 +22,10 @@ class WeightFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "w1" => 0.4,
+            "w2" => 0.3,
+            "w3" => 0.2,
+            "w4" => 0.1
         ];
     }
 }

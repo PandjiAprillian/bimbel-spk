@@ -13,6 +13,6 @@ class AlternativeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Alternative::factory()->count(3)->create();
     }
 }
