@@ -79,6 +79,13 @@
     </nav>
     {{-- End Navbar --}}
 
+    {{-- Contents --}}
+    <div class="container">
+        @yield('content')
+    </div>
+    {{-- End Contents --}}
+
+    @if (request()->is('/'))
     {{-- Jumbotron --}}
     <div class="jumbotron jumbotron-fluid" style="height: 100vh;">
         <div class="container pt-5">
@@ -173,6 +180,7 @@
         </div>
     </div>
     {{-- End Cards Member --}}
+    @endif
 
     {{-- Footer --}}
     <footer>
