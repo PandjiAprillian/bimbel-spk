@@ -23,6 +23,9 @@ $pengajar = [
 "4" => "Lulusan S1",
 "5" => "Lulusan S2"
 ];
+
+$previousURLExplode = explode("/", url()->previous());
+$url = end($previousURLExplode);
 @endphp
 
 @csrf
@@ -121,6 +124,8 @@ $pengajar = [
         </div>
     </div>
 </div>
+
+<input type="hidden" name="url" value="{{ $url }}">
 
 <div class="form-group">
     <button class="btn btn-danger btn-block">{{ $button }}</button>

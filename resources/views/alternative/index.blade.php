@@ -36,7 +36,7 @@
                             method="POST" class="d-inline">
                             @method('DELETE')
                             @csrf
-                            <button class="btn btn-sm btn-warning">Hapus</button>
+                            <button class="btn btn-sm btn-warning btn-hapus" data-name="{{ $alternative->nama }}">Hapus</button>
                         </form>
                     </td>
                     @endauth

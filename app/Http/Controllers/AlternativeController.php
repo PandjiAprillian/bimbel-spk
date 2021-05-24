@@ -125,7 +125,11 @@ class AlternativeController extends Controller
             ]
         );
 
-        return redirect()->route('scores.index')->with("success", "Ubah data alternatif {$request->nama} berhasil!");
+        if ($request->url === 'alternatives') {
+            return redirect()->route("alternatives.index")->with("success", "Ubah data alternatif {$request->nama} berhasil!");
+        } else {
+            return redirect()->route("scores.index")->with("success", "Data nilai altenatif {$request->nama} berhasil diubah!");
+        }
     }
 
     /**
@@ -136,6 +140,7 @@ class AlternativeController extends Controller
      */
     public function destroy(Alternative $alternative)
     {
-        //
+        $alternative->delete();
+        return redirect()->route("alternatives.index")->with("success", "Data alternatif {$alternative->nama} berhasil dihapus!");
     }
 }
