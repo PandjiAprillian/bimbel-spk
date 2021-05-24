@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Alternative extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['nama', 'alamat'];
+
+    public function score()
+    {
+        return $this->hasOne(Score::class);
+    }
 }

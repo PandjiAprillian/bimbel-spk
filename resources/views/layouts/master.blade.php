@@ -12,9 +12,9 @@
 
 <body>
     {{-- Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top {{ request()->is('/') ? 'slideInDown' : '' }}">
         <div class="container">
-            <a class="navbar-brand" href="#">Bimbel SPK</a>
+            <a class="navbar-brand" href="/">Bimbel SPK</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -88,7 +88,7 @@
     <div class="jumbotron jumbotron-fluid" style="height: 100vh;">
         <div class="container pt-5">
             <div class="row flex-sm-row flex-column">
-                <div class="col d-flex flex-column justify-content-center">
+                <div class="col d-flex flex-column justify-content-center lightSpeedIn">
                     <h2>Sistem Penunjang Keputusan Bimbel</h2>
                     <p class="lead">Dengan Anggota Kelompok :</p>
                     <ol>
@@ -99,7 +99,7 @@
                     </ol>
                 </div>
                 <div class="col">
-                    <img src="{{ asset('img/study.svg') }}" alt="Bimbel Terbaik" class="img-fluid">
+                    <img src="{{ asset('img/study.svg') }}" alt="Bimbel Terbaik" class="img-fluid lightSpeedIn">
                 </div>
             </div>
         </div>
@@ -191,6 +191,7 @@
     {{-- End Footer --}}
 
     <script src="{{ asset('js/app.js') }}"></script>
+    @include('sweetalert::alert')
 </body>
 
 </html>

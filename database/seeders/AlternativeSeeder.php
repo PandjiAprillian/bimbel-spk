@@ -13,6 +13,17 @@ class AlternativeSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Alternative::factory()->count(3)->create();
+        $faker = \Faker\Factory::create('id_ID');
+        $faker->seed('123');
+
+        $bimbelNames = ["Ganesha", "Primagama", "Kumon"];
+        for($i = 0; $i < 3; $i++) {
+            \App\Models\Alternative::create(
+                [
+                    'nama' => $bimbelNames[$i],
+                    'alamat' => $faker->address
+                ]
+            );
+        }
     }
 }

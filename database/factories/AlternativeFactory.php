@@ -21,10 +21,10 @@ class AlternativeFactory extends Factory
      */
     public function definition()
     {
-        $bimbelNames = ["Ganesha", "Primagama", "Kumon"];
+        // $bimbelNames = ["Ganesha", "Primagama", "Kumon"];
         return [
-            'nama' => $this->faker->unique()->randomElement($bimbelNames),
-            'alamat' => $this->faker->address
+            // 'nama' => $this->faker->unique()->randomElement($bimbelNames),
+            // 'alamat' => $this->faker->address
         ];
     }
 }

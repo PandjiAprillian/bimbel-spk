@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Alternative;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AlternativeController extends Controller
 {
@@ -36,7 +37,34 @@ class AlternativeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'nama'       => 'required|min:5',
+                'alamat'     => 'required',
+                'biaya'      => "required|in:5,4,3,2",
+                'akreditasi' => 'required|in:5,3,1',
+                'fasilitas'  => 'required|in:1,3,5',
+                'pengajar'   => 'required|in:3,4,5'
+            ]
+        );
+
+        $alternative = Alternative::create(
+            [
+                'nama' => $request->nama,
+                'alamat' => $request->alamat
+            ]
+        );
+
+        $alternative->score()->create(
+            [
+                'c1' => $request->biaya,
+                'c2' => $request->akreditasi,
+                'c3' => $request->fasilitas,
+                'c4' => $request->pengajar
+            ]
+        );
+
+        return redirect()->route('alternatives.index')->with("success", "Data alternatif {$request->nama} berhasil disimpan");
     }
 
     /**

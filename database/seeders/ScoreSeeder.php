@@ -13,6 +13,37 @@ class ScoreSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Score::factory()->count(3)->create();
+        $faker = \Faker\Factory::create('id_ID');
+        $faker->seed(123);
+
+        \App\Models\Score::create(
+            [
+                'alternative_id' => 1,
+                'c1' => 3,
+                'c2' => 3,
+                'c3' => 3,
+                'c4' => 4
+            ]
+        );
+
+        \App\Models\Score::create(
+            [
+                'alternative_id' => 2,
+                'c1' => 2,
+                'c2' => 5,
+                'c3' => 3,
+                'c4' => 3
+            ]
+        );
+
+        \App\Models\Score::create(
+            [
+                'alternative_id' => 3,
+                'c1' => 4,
+                'c2' => 1,
+                'c3' => 5,
+                'c4' => 5
+            ]
+        );
     }
 }

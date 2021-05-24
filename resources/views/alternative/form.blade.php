@@ -13,7 +13,7 @@
         </div>
         <div class="col">
             <label for="alamat">Alamat</label>
-            <textarea class="form-control" id="alamat" rows="3">{{ old('alamat') }}</textarea>
+            <textarea class="form-control" id="alamat" rows="3" name="alamat">{{ old('alamat') }}</textarea>
             @error('alamat')
             <small class="form-text text-danger">
                 <strong>{{ $message }}</strong>
@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col">
             <label for="biaya">Biaya Bimbel (C1)</label>
-            <select class="form-control" id="biaya">
+            <select class="form-control" id="biaya" name="biaya">
                 <option value="5"> &uparrow; Rp. 3.500.000</option>
                 <option value="4">Rp. 2.500.000 - Rp. 3.500.000</option>
                 <option value="3">Rp. 1.500.000 - Rp. 2.500.000</option>
@@ -41,7 +41,7 @@
         </div>
         <div class="col">
             <label for="akreditasi">Akreditas Bimbel (C2)</label>
-            <select class="form-control" id="akreditasi">
+            <select class="form-control" id="akreditasi" name="akreditasi">
                 <option value="5">A</option>
                 <option value="3">B</option>
                 <option value="1">C</option>
@@ -59,7 +59,7 @@
     <div class="row">
         <div class="col">
             <label for="fasilitas">Fasilitas Bimbel (C3)</label>
-            <select class="form-control" id="fasilitas">
+            <select class="form-control" id="fasilitas" name="fasilitas">
                 <option value="1">Tidak Lengkap</option>
                 <option value="3">Cukup Lengkap</option>
                 <option value="5">Sangat Lengkap</option>
@@ -72,10 +72,10 @@
         </div>
         <div class="col">
             <label for="pengajar">Pengajar Bimbel (C4)</label>
-            <select class="form-control" id="pengajar">
+            <select class="form-control" id="pengajar" name="pengajar">
                 <option value="3">Lulusan D1/D2/D3</option>
                 <option value="4">Lulusan S1</option>
-                <option value="5">Lulusa S2</option>
+                <option value="5">Lulusan S2</option>
             </select>
             @error('pengajar')
             <small class="form-text text-danger">
@@ -87,5 +87,5 @@
 </div>
 
 <div class="form-group">
-    <button class="btn btn-success btn-block">{{ $button }}</button>
+    <button class="btn btn-danger btn-block">{{ $button }}</button>
 </div>

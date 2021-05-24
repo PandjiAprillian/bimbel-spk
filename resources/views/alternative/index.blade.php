@@ -5,7 +5,9 @@
 <div class="container pt-5">
     <div class="row justify-content-between">
         <h1>Data Alternatif</h1>
-        <a href="{{ route('alternatives.create') }}" class="btn btn-sm btn-success align-self-center">Tambah Alternatif</a>
+        @auth
+        <a href="{{ route('alternatives.create') }}" class="btn btn-sm btn-danger align-self-center">Tambah Alternatif</a>
+        @endauth
     </div>
     <div class="row">
         <table class="table table-bordered">
