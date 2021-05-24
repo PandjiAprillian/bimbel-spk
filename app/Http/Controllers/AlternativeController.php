@@ -86,7 +86,7 @@ class AlternativeController extends Controller
      */
     public function edit(Alternative $alternative)
     {
-        //
+        return view('alternative.edit', compact('alternative'));
     }
 
     /**
