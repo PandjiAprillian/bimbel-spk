@@ -11,30 +11,35 @@
         @endauth
     </div>
     <div class="row">
-        <table class="table table-bordered">
-            <thead class="text-center">
+        <table class="table table-bordered text-center">
+            <thead>
                 <tr>
                     <th>No.</th>
                     <th>Nama Bimbel</th>
                     <th>Alamat</th>
+                    @auth
                     <th>Aksi</th>
+                    @endauth
                 </tr>
             </thead>
             <tbody>
                 @forelse ($alternatives as $alternative)
                 <tr>
-                    <td class="text-center">{{ $loop->iteration }}</td>
-                    <td class="text-center">{{ $alternative->nama }}</td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $alternative->nama }}</td>
                     <td>{{ $alternative->alamat }}</td>
-                    <td class="text-center">
+                    @auth
+                    <td>
                         <a href="{{ route('alternatives.edit', ['alternative' => $alternative->id]) }}"
                             class="btn btn-sm btn-success">Edit</a>
-                        <form action="{{ route('alternatives.destroy', ['alternative' => $alternative->id]) }}" method="POST" class="d-inline">
+                        <form action="{{ route('alternatives.destroy', ['alternative' => $alternative->id]) }}"
+                            method="POST" class="d-inline">
                             @method('DELETE')
                             @csrf
                             <button class="btn btn-sm btn-warning">Hapus</button>
                         </form>
                     </td>
+                    @endauth
                 </tr>
                 @empty
                 <tr>

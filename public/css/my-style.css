@@ -7,6 +7,11 @@ footer {
     width: 100%;
 }
 
+.accordion .card .card-header .btn-link {
+    text-decoration: none;
+    color: #e3342f;
+}
+
 /* Animation */
 
 .slideInDown {

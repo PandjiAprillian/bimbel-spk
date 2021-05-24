@@ -98,7 +98,34 @@ class AlternativeController extends Controller
      */
     public function update(Request $request, Alternative $alternative)
     {
-        //
+        $request->validate(
+            [
+                'nama'       => 'required|min:5',
+                'alamat'     => 'required',
+                'biaya'      => "required|in:5,4,3,2",
+                'akreditasi' => 'required|in:5,3,1',
+                'fasilitas'  => 'required|in:1,3,5',
+                'pengajar'   => 'required|in:3,4,5'
+            ]
+        );
+
+        Alternative::where('id', $alternative->id)->update(
+            [
+                'nama' => $request->nama,
+                'alamat' => $request->alamat
+            ]
+        );
+
+        $alternative->score()->update(
+            [
+                'c1' => $request->biaya,
+                'c2' => $request->akreditasi,
+                'c3' => $request->fasilitas,
+                'c4' => $request->pengajar
+            ]
+        );
+
+        return redirect()->route('scores.index')->with("success", "Ubah data alternatif {$request->nama} berhasil!");
     }
 
     /**

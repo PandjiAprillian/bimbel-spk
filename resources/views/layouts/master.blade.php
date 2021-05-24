@@ -30,7 +30,7 @@
                     </li>
                     @auth
                     <li class="nav-item {{ request()->is("nilai") ? "active" : "" }}">
-                        <a class="nav-link" href="#">Nilai Alternatif</a>
+                        <a class="nav-link" href="{{ route('scores.index') }}">Nilai Alternatif</a>
                     </li>
                     <li class="nav-item {{ request()->is("bobot") ? "active" : "" }}">
                         <a class="nav-link" href="#">Bobot</a>
