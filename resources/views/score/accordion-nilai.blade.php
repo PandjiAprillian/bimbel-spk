@@ -25,6 +25,10 @@
                         @endforeach
                     </tbody>
                 </table>
+                <p>
+                    Nilai bobot untuk C1 adalah <i>"semakin kecil nilainya maka semakin baik"</i>, maka
+                    kriteria biaya (C1) masuk ke dalam kategori <strong>cost</strong>.
+                </p>
             </div>
         </div>
     </div>
@@ -53,6 +57,10 @@
                         @endforeach
                     </tbody>
                 </table>
+                <p>
+                    Nilai bobot untuk C2 adalah <i>"semakin besar nilainya maka semakin baik"</i>, maka
+                    kriteria akreditasi (C2) masuk ke dalam kategori <strong>benefit</strong>.
+                </p>
             </div>
         </div>
     </div>
@@ -81,6 +89,10 @@
                         @endforeach
                     </tbody>
                 </table>
+                <p>
+                    Nilai bobot untuk C3 adalah <i>"semakin besar nilainya maka semakin baik"</i>, maka
+                    kriteria fasilitas (C3) masuk ke dalam kategori <strong>benefit</strong>.
+                </p>
             </div>
         </div>
     </div>
@@ -109,6 +121,10 @@
                         @endforeach
                     </tbody>
                 </table>
+                <p>
+                    Nilai bobot untuk C4 adalah <i>"semakin besar nilainya maka semakin baik"</i>, maka
+                    kriteria pengajar (C4) masuk ke dalam kategori <strong>benefit</strong>.
+                </p>
             </div>
         </div>
     </div>
