@@ -1,4 +1,23 @@
-let btnHapus = document.querySelectorAll('.btn-hapus');
+const inputWeights = document.querySelectorAll(".weight");
+for (const inputWeight of inputWeights)  {
+    inputWeight.addEventListener("keypress", function (event) {
+        event.target.removeAttribute("readonly");
+        event.target.setAttribute("type", "text");
+    });
+
+    inputWeight.addEventListener("click", function (event) {
+        event.target.removeAttribute("readonly");
+        event.target.setAttribute("type", "text");
+    });
+
+    inputWeight.addEventListener("blur", function (event) {
+        event.target.removeAttribute("type");
+        event.target.setAttribute("readonly", true);
+    });
+}
+
+
+const btnHapus = document.querySelectorAll('.btn-hapus');
 for (const button of btnHapus) {
     button.addEventListener("click", confirmation);
 

@@ -29,11 +29,11 @@
                         <a class="nav-link" href="{{ route('alternatives.index') }}">Data Alternatif</a>
                     </li>
                     @auth
-                    <li class="nav-item {{ request()->is("nilai") ? "active" : "" }}">
+                    <li class="nav-item {{ request()->is("scores") ? "active" : "" }}">
                         <a class="nav-link" href="{{ route('scores.index') }}">Nilai Alternatif</a>
                     </li>
-                    <li class="nav-item {{ request()->is("bobot") ? "active" : "" }}">
-                        <a class="nav-link" href="#">Bobot</a>
+                    <li class="nav-item {{ request()->is("weights") ? "active" : "" }}">
+                        <a class="nav-link" href="{{ route('weights.index') }}">Bobot</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">SAW</a>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AlternativeController;
 use App\Http\Controllers\ScoreController;
+use App\Http\Controllers\WeightController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,3 +27,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource("alternatives", AlternativeController::class);
 Route::resource("scores", ScoreController::class);
+Route::resource("weights", WeightController::class);

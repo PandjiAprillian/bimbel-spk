@@ -1902,13 +1902,40 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-var btnHapus = document.querySelectorAll('.btn-hapus');
+var inputWeights = document.querySelectorAll(".weight");
 
-var _iterator = _createForOfIteratorHelper(btnHapus),
+var _iterator = _createForOfIteratorHelper(inputWeights),
     _step;
 
 try {
   for (_iterator.s(); !(_step = _iterator.n()).done;) {
+    var inputWeight = _step.value;
+    inputWeight.addEventListener("keypress", function (event) {
+      event.target.removeAttribute("readonly");
+      event.target.setAttribute("type", "text");
+    });
+    inputWeight.addEventListener("click", function (event) {
+      event.target.removeAttribute("readonly");
+      event.target.setAttribute("type", "text");
+    });
+    inputWeight.addEventListener("blur", function (event) {
+      event.target.removeAttribute("type");
+      event.target.setAttribute("readonly", true);
+    });
+  }
+} catch (err) {
+  _iterator.e(err);
+} finally {
+  _iterator.f();
+}
+
+var btnHapus = document.querySelectorAll('.btn-hapus');
+
+var _iterator2 = _createForOfIteratorHelper(btnHapus),
+    _step2;
+
+try {
+  for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
     var confirmation = function confirmation(event) {
       event.preventDefault();
       Swal.fire({
@@ -1927,13 +1954,13 @@ try {
       });
     };
 
-    var button = _step.value;
+    var button = _step2.value;
     button.addEventListener("click", confirmation);
   }
 } catch (err) {
-  _iterator.e(err);
+  _iterator2.e(err);
 } finally {
-  _iterator.f();
+  _iterator2.f();
 }
 
 /***/ }),
