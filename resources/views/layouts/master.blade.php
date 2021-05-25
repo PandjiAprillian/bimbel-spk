@@ -183,7 +183,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <a href="https://github.com/pandjiaprillian" target="blank">
+                <a href="https://github.com/PandjiAprillian/bimbel-spk" target="blank">
                     <img src="{{ asset('img/favicon/github.svg') }}" alt="github" class="github">
                 </a>
             </div>
