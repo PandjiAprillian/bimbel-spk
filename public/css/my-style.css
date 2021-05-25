@@ -7,10 +7,36 @@ footer {
     width: 100%;
 }
 
+.title {
+    background-color: #444649;
+    color: #ee8e9e;
+}
+
 .accordion .card .card-header .btn-link {
     text-decoration: none;
     color: #e3342f;
 }
+
+/* Breakpoints */
+@media (min-width: 576px) {
+    .title-wth {
+        width: 100%;
+    }
+
+    .sub-title-wth {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .title-wth {
+        width: 75%;
+    }
+
+    .sub-title-wth{
+        width: 50%;
+    }
+ }
 
 /* Animation */
 

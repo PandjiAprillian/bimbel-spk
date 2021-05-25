@@ -12,7 +12,7 @@
 
 <body>
     {{-- Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top {{ request()->is('/') ? 'slideInDown' : '' }}">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top slideInDown">
         <div class="container">
             <a class="navbar-brand" href="/">Bimbel SPK</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -48,11 +48,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
-                    {{-- @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    </li>
-                    @endif --}}
                     @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -89,7 +84,8 @@
         <div class="container pt-5">
             <div class="row flex-sm-row flex-column">
                 <div class="col d-flex flex-column justify-content-center lightSpeedIn">
-                    <h2>Sistem Penunjang Keputusan Bimbel</h2>
+                    <h2 class="text-center text-md-left p-2 rounded title title-wth">Sistem Penunjang Keputusan</h2>
+                    <h4 class="text-center text-md-left p-2 rounded title sub-title-wth">Study Case : <strong>Bimbel</strong></h4>
                     <p class="lead">Dengan Anggota Kelompok :</p>
                     <ol>
                         <li>Rafita Suci</li>
@@ -107,7 +103,7 @@
     {{-- End Jumbotron --}}
 
     {{-- Cards Member --}}
-    <div class="container card-members">
+    <div class="container card-members mt-4">
         <div class="row justify-content-center m-3">
             <div class="card shadow-sm" style="width: 70%">
                 <div class="card-body">
@@ -181,13 +177,13 @@
     @endif
 
     {{-- Footer --}}
-    {{-- <footer style="{{ (!request()->is('/')) ? "position: absolute; bottom: 0;" : "" }}">
+    <footer style="{{ (!request()->is('/')) ? "position: absolute; bottom: 0;" : "" }}">
         <div class="container">
             <div class="row justify-content-center align-items-center p-2">
                 Made With Laravel
             </div>
         </div>
-    </footer> --}}
+    </footer>
     {{-- End Footer --}}
 
     <script src="{{ asset('js/app.js') }}"></script>
