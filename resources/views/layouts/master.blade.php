@@ -192,8 +192,8 @@
     {{-- End Footer --}}
     @endif
 
-    <script src="{{ asset('js/app.js') }}"></script>
     @include('sweetalert::alert')
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

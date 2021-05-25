@@ -30,7 +30,7 @@ $url = end($previousURLExplode);
 
 @csrf
 
-<div class="form-group" {{ !is_numeric($url) ? 'hidden' : '' }}>
+<div class="form-group" {{ (is_numeric($url) || request()->is('alternatives/create')) ? '' : 'hidden' }}>
     <div class="row">
         <div class="col">
             <label for="nama">Nama</label>
