@@ -1,8 +1,8 @@
 @extends('layouts.master')
-@section('title', 'Data Alternatif');
+@section('title', 'Data Alternatif')
 
 @section('content')
-<div class="container pt-5">
+<div class="container pt-5 mt-4">
     <div class="row justify-content-between">
         <h1>Data Alternatif</h1>
         @auth

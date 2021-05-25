@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Bimbel SPK')</title>
+    <link rel="shortcut icon" href="{{ asset('img/favicon/favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/my-style.css') }}">
 </head>
@@ -22,9 +23,6 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item {{ request()->is("/") ? "active" : "" }}">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
                     <li class="nav-item {{ request()->is("alternatives") ? "active" : "" }}">
                         <a class="nav-link" href="{{ route('alternatives.index') }}">Data Alternatif</a>
                     </li>
@@ -180,7 +178,14 @@
     <footer>
         <div class="container">
             <div class="row justify-content-center align-items-center p-2">
-                Made With Laravel
+                <div class="col">
+                    Sistem Informasi - Universitas Bina Sarana Informatika Sukabumi
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <a href="https://github.com/pandjiaprillian" target="blank">
+                    <img src="{{ asset('img/favicon/github.svg') }}" alt="github" class="github">
+                </a>
             </div>
         </div>
     </footer>

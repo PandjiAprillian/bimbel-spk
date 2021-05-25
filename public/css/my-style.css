@@ -28,6 +28,11 @@ footer {
     border-color: #e3342f;
 }
 
+.github {
+    width: 1.8em;
+    fill: white;
+}
+
 /* Breakpoints */
 @media (min-width: 576px) {
     .title-wth {
