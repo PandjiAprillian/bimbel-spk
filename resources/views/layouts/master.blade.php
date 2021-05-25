@@ -113,7 +113,7 @@
                         </div>
                         <div class="col">
                             <h5>Rafita Suci</h5>
-                            <h6>19182414</h6>
+                            <h6>19182604</h6>
                             <h6>Sistem Informasi</h6>
                         </div>
                     </div>
