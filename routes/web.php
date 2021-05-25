@@ -17,16 +17,13 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view("layouts.master");
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::view('/', 'layouts.master');
 
 Route::resource("alternatives", AlternativeController::class);
-Route::resource("scores", ScoreController::class);
-Route::resource("weights", WeightController::class);
+Route::resource("scores", ScoreController::class)->middleware('auth');
+Route::resource("weights", WeightController::class)->middleware('auth');
 Route::get('/saws', [SawController::class, 'index'])->name('saws.index');
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware();
