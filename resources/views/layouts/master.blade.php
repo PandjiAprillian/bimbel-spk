@@ -35,8 +35,8 @@
                     <li class="nav-item {{ request()->is("weights") ? "active" : "" }}">
                         <a class="nav-link" href="{{ route('weights.index') }}">Bobot</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">SAW</a>
+                    <li class="nav-item {{ request()->is("saws") ? "active" : "" }}">
+                        <a class="nav-link" href="{{ route('saws.index') }}">SAW</a>
                     </li>
                     @endauth
                 </ul>
