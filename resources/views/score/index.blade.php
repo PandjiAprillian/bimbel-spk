@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Nilai Alternatif');
+@section('title', 'Nilai Alternatif')
 
 @php
 $biaya = [
@@ -29,7 +29,7 @@ $pengajar = [
 @endphp
 
 @section('content')
-<div class="container pt-5">
+<div class="container pt-5 mt-4">
     <div class="row">
         <div class="col">
             <h1>Nilai Alternatif</h1>

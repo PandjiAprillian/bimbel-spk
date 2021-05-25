@@ -1,8 +1,8 @@
 @extends('layouts.master')
-@section('title', 'Data Bobot');
+@section('title', 'Data Bobot')
 
 @section('content')
-<div class="container pt-5">
+<div class="container pt-5 mt-4">
     <div class="row justify-content-between">
         <div class="col">
             <h1>Data Bobot</h1>
@@ -12,7 +12,7 @@
         <div class="col-4">
             <div class="card">
                 <div class="card-body">
-                    Dari setiap kriteria yang digunakan, semuanya akan diberikan nilai bobot
+                    Dari setiap kriteria yang digunakan, semuanya akan diberikan nilai bobot.
                 </div>
             </div>
         </div>
@@ -38,33 +38,33 @@
                             <td>
                                 <input readonly class="form-control weight" name="w1" value="{{ $weight->w1 }}">
                                 @error('w1')
-                                    <small class="form-text text-danger">
-                                        <strong>{{ $message }}</strong>
-                                    </small>
+                                <small class="form-text text-danger">
+                                    <strong>{{ $message }}</strong>
+                                </small>
                                 @enderror
                             </td>
                             <td>
                                 <input readonly class="form-control weight" name="w2" value="{{ $weight->w2 }}">
                                 @error('w2')
-                                    <small class="form-text text-danger">
-                                        <strong>{{ $message }}</strong>
-                                    </small>
+                                <small class="form-text text-danger">
+                                    <strong>{{ $message }}</strong>
+                                </small>
                                 @enderror
                             </td>
                             <td>
                                 <input readonly class="form-control weight" name="w3" value="{{ $weight->w3 }}">
                                 @error('w3')
-                                    <small class="form-text text-danger">
-                                        <strong>{{ $message }}</strong>
-                                    </small>
+                                <small class="form-text text-danger">
+                                    <strong>{{ $message }}</strong>
+                                </small>
                                 @enderror
                             </td>
                             <td>
                                 <input readonly class="form-control weight" name="w4" value="{{ $weight->w4 }}">
                                 @error('w4')
-                                    <small class="form-text text-danger">
-                                        <strong>{{ $message }}</strong>
-                                    </small>
+                                <small class="form-text text-danger">
+                                    <strong>{{ $message }}</strong>
+                                </small>
                                 @enderror
                             </td>
                         </tr>
@@ -74,6 +74,16 @@
                         </tr>
                         @endif
                     </tbody>
+                    <tbody>
+                        <th>C1</th>
+                        <th>C2</th>
+                        <th>C3</th>
+                        <th>C4</th>
+                    </tbody>
+                    <tfoot>
+                        <th colspan="4">Kriteria</th>
+
+                    </tfoot>
                 </table>
                 <button class="btn btn-danger btn-block">Ubah Bobot</button>
             </form>

@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::view('/', 'layouts.master');
 
-Route::resource("alternatives", AlternativeController::class);
+Route::resource("alternatives", AlternativeController::class)->middleware('auth');
 Route::resource("scores", ScoreController::class)->middleware('auth');
 Route::resource("weights", WeightController::class)->middleware('auth');
 Route::get('/saws', [SawController::class, 'index'])->name('saws.index');

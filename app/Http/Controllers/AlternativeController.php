@@ -8,12 +8,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class AlternativeController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth')->except('index');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -81,7 +75,7 @@ class AlternativeController extends Controller
      */
     public function show(Alternative $alternative)
     {
-        //
+        return view('alternative.show', compact('alternative'));
     }
 
     /**
@@ -131,8 +125,8 @@ class AlternativeController extends Controller
             ]
         );
 
-        if ($request->url === 'alternatives') {
-            return redirect()->route("alternatives.index")->with("success", "Ubah data alternatif {$request->nama} berhasil!");
+        if (is_numeric($request->url)) {
+            return redirect()->route("alternatives.show", ['alternative' => $alternative->id])->with("success", "Ubah data alternatif {$request->nama} berhasil!");
         } else {
             return redirect()->route("scores.index")->with("success", "Data nilai altenatif {$request->nama} berhasil diubah!");
         }

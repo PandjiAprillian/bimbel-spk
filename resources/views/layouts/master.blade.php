@@ -23,10 +23,10 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+                    @auth
                     <li class="nav-item {{ request()->is("alternatives") ? "active" : "" }}">
                         <a class="nav-link" href="{{ route('alternatives.index') }}">Data Alternatif</a>
                     </li>
-                    @auth
                     <li class="nav-item {{ request()->is("scores") ? "active" : "" }}">
                         <a class="nav-link" href="{{ route('scores.index') }}">Nilai Alternatif</a>
                     </li>

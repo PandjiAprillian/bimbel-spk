@@ -1,8 +1,8 @@
 @extends('layouts.master')
-@section('title', 'SAW');
+@section('title', 'SAW')
 
 @section('content')
-<div class="container pt-5">
+<div class="container pt-5 mt-4">
     <div class="row justify-content-between">
         <div class="col">
             <h4 class="title text-center p-2 rounded">Hasil SAW</h4>

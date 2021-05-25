@@ -17,9 +17,7 @@
                     <th>No.</th>
                     <th>Nama Bimbel</th>
                     <th>Alamat</th>
-                    @auth
                     <th>Aksi</th>
-                    @endauth
                 </tr>
             </thead>
             <tbody>
@@ -29,18 +27,17 @@
                     <td>{{ $alternatives->firstItem() + $loop->iteration - 1 }}</td>
                     <td>{{ $alternative->nama }}</td>
                     <td>{{ $alternative->alamat }}</td>
-                    @auth
                     <td>
-                        <a href="{{ route('alternatives.edit', ['alternative' => $alternative->id]) }}"
-                            class="btn btn-sm btn-success">Edit</a>
+                        <a href="{{ route('alternatives.show', ['alternative' => $alternative->id]) }}"
+                            class="btn btn-sm btn-info text-light">Detail</a>
                         <form action="{{ route('alternatives.destroy', ['alternative' => $alternative->id]) }}"
                             method="POST" class="d-inline">
                             @method('DELETE')
                             @csrf
-                            <button class="btn btn-sm btn-warning btn-hapus" data-name="{{ $alternative->nama }}">Hapus</button>
+                            <button class="btn btn-sm btn-warning btn-hapus"
+                                data-name="{{ $alternative->nama }}">Hapus</button>
                         </form>
                     </td>
-                    @endauth
                 </tr>
                 @empty
                 <tr>

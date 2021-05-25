@@ -36,11 +36,7 @@
                                         @enderror
                                     </div>
                                     <button class="btn btn-danger btn-block">Login</button>
-                                    <hr>
                                 </form>
-                                <div class="text-center">
-                                    <a class="small text-danger" href="register.html">Create an Account!</a>
-                                </div>
                             </div>
                         </div>
                     </div>

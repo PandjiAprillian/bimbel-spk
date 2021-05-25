@@ -30,11 +30,11 @@ $url = end($previousURLExplode);
 
 @csrf
 
-<div class="form-group">
+<div class="form-group" {{ !is_numeric($url) ? 'hidden' : '' }}>
     <div class="row">
         <div class="col">
             <label for="nama">Nama</label>
-            <input type="tel" class="form-control" name="nama" id="nama"
+            <input type="text" class="form-control" name="nama" id="nama"
                 value="{{ (old('nama') ?? $alternative->nama ?? '') }}">
             @error('nama')
             <small class="form-text text-danger">
