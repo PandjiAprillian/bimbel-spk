@@ -17,6 +17,17 @@ footer {
     color: #e3342f;
 }
 
+.pagination > li > a,
+.pagination > li > span {
+    color: #e3342f;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    background-color: #e3342f;
+    border-color: #e3342f;
+}
+
 /* Breakpoints */
 @media (min-width: 576px) {
     .title-wth {

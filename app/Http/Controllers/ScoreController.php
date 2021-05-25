@@ -14,7 +14,7 @@ class ScoreController extends Controller
      */
     public function index()
     {
-        $scores = Score::all();
+        $scores = Score::paginate(5);
         return view('score.index', compact('scores'));
     }
 

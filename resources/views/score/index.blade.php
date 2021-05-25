@@ -56,14 +56,15 @@ $pengajar = [
                 <tbody>
                     @forelse ($scores as $score)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $scores->firstItem() + $loop->iteration - 1 }}</td>
                         <td>{{ $score->alternative->nama }}</td>
                         <td>{{ $score->c1 }}</td>
                         <td>{{ $score->c2 }}</td>
                         <td>{{ $score->c3 }}</td>
                         <td>{{ $score->c4 }}</td>
                         <td>
-                            <a href="{{ route('alternatives.edit', ['alternative' => $score->alternative->id]) }}" class="btn btn-success btn-sm">
+                            <a href="{{ route('alternatives.edit', ['alternative' => $score->alternative->id]) }}"
+                                class="btn btn-success btn-sm">
                                 Edit
                             </a>
                         </td>
@@ -75,6 +76,11 @@ $pengajar = [
                     @endforelse
                 </tbody>
             </table>
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    {{ $scores->links() }}
+                </div>
+            </div>
         </div>
     </div>
 </div>

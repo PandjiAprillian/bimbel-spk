@@ -85,7 +85,8 @@
             <div class="row flex-sm-row flex-column">
                 <div class="col d-flex flex-column justify-content-center lightSpeedIn">
                     <h2 class="text-center text-md-left p-2 rounded title title-wth">Sistem Penunjang Keputusan</h2>
-                    <h4 class="text-center text-md-left p-2 rounded title sub-title-wth">Study Case : <strong>Bimbel</strong></h4>
+                    <h4 class="text-center text-md-left p-2 rounded title sub-title-wth">Study Case :
+                        <strong>Bimbel</strong></h4>
                     <p class="lead">Dengan Anggota Kelompok :</p>
                     <ol>
                         <li>Rafita Suci</li>
@@ -174,10 +175,9 @@
         </div>
     </div>
     {{-- End Cards Member --}}
-    @endif
 
     {{-- Footer --}}
-    <footer style="{{ (!request()->is('/')) ? "position: absolute; bottom: 0;" : "" }}">
+    <footer>
         <div class="container">
             <div class="row justify-content-center align-items-center p-2">
                 Made With Laravel
@@ -185,6 +185,7 @@
         </div>
     </footer>
     {{-- End Footer --}}
+    @endif
 
     <script src="{{ asset('js/app.js') }}"></script>
     @include('sweetalert::alert')

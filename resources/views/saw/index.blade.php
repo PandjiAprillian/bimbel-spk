@@ -5,12 +5,12 @@
 <div class="container pt-5">
     <div class="row justify-content-between">
         <div class="col">
-            <h1>Hasil SAW</h1>
+            <h4 class="title text-center p-2 rounded">Hasil SAW</h4>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <table class="table table-bordered text-center">
+            <table class="table table-bordered table-striped text-center">
                 <thead>
                     <tr>
                         <th>No.</th>

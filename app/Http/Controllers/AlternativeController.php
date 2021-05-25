@@ -15,7 +15,7 @@ class AlternativeController extends Controller
      */
     public function index()
     {
-        $alternatives = Alternative::all();
+        $alternatives = Alternative::paginate(5);
         return view("alternative.index", compact("alternatives"));
     }
 

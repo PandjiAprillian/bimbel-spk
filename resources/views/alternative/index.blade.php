@@ -23,9 +23,10 @@
                 </tr>
             </thead>
             <tbody>
+                <?php $i = 1; ?>
                 @forelse ($alternatives as $alternative)
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $alternatives->firstItem() + $loop->iteration - 1 }}</td>
                     <td>{{ $alternative->nama }}</td>
                     <td>{{ $alternative->alamat }}</td>
                     @auth
@@ -48,6 +49,11 @@
                 @endforelse
             </tbody>
         </table>
+    </div>
+    <div class="row">
+        <div class="mx-auto">
+            {{ $alternatives->links() }}
+        </div>
     </div>
 </div>
 @endsection
