@@ -3,14 +3,14 @@
 
 @section('content')
 <div class="container pt-5 mt-4">
-    <div class="row justify-content-between">
+    <div class="row justify-content-between mb-3 mb-md-0">
         <h1>Data Alternatif</h1>
         @auth
         <a href="{{ route('alternatives.create') }}" class="btn btn-sm btn-danger align-self-center">Tambah
             Alternatif</a>
         @endauth
     </div>
-    <div class="row">
+    <div class="row table-responsive">
         <table class="table table-bordered text-center">
             <thead>
                 <tr>

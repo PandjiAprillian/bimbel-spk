@@ -40,7 +40,7 @@ $pengajar = [
             <h5 class="bg-dark text-light text-center p-2 rounded">Penjelasan Kriteria</h5>
             @include('score.accordion-nilai')
         </div>
-        <div class="col">
+        <div class="col table-responsive">
             <table class="table table-bordered text-center">
                 <thead>
                     <tr>
