@@ -8,33 +8,17 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class AlternativeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $alternatives = Alternative::paginate(5);
         return view("alternative.index", compact("alternatives"));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view("alternative.create");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request->validate(
@@ -67,35 +51,16 @@ class AlternativeController extends Controller
         return redirect()->route('alternatives.index')->with("success", "Data alternatif {$request->nama} berhasil disimpan");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Alternative  $alternative
-     * @return \Illuminate\Http\Response
-     */
     public function show(Alternative $alternative)
     {
         return view('alternative.show', compact('alternative'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Alternative  $alternative
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Alternative $alternative)
     {
         return view('alternative.edit', compact('alternative'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Alternative  $alternative
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Alternative $alternative)
     {
         $request->validate(
@@ -132,12 +97,6 @@ class AlternativeController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Alternative  $alternative
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Alternative $alternative)
     {
         $alternative->delete();
